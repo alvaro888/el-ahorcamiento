@@ -21,8 +21,11 @@ public class ElAhorcamiento extends javax.swing.JFrame {
     /**
      * Creates new form ElAhorcamiento
      */
-    
+    //palabra oculta en el futuro la pondre con un random
     String palabraOculta = "CETYS";
+    
+    //contador para el numer de fallos 
+    int numeroFallos = 0;
     
     
     
@@ -37,9 +40,12 @@ public class ElAhorcamiento extends javax.swing.JFrame {
     
     private void chequeaLetra(String letra){
         letra = letra.toUpperCase();
-        String palabraConGuiones = pantalla.getText();
+        //guardo el texto de la pantalla en un string auxiliar
+        String palabraConGuiones = jLabel2.getText();
         
         if (palabraOculta.contains(letra)){
+            //desocultar la letra en la pantalla
+            //quitar el guion
             for(int i=0; i < palabra.Oculta.length(); i++) {
                if(palabraOculta.CharAT (i)== letra.Chart (0)){
                palabraConGuiones = palabraConGuiones.substring(2*i+1)
@@ -53,6 +59,7 @@ public class ElAhorcamiento extends javax.swing.JFrame {
         
         else{ 
             numeroFallos++;
+            //jLabel3.settext(String.valueOf(numeroFallos));
         }
         
         repaint();
