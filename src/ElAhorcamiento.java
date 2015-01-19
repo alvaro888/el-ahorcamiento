@@ -48,7 +48,7 @@ public class ElAhorcamiento extends javax.swing.JFrame {
             //quitar el guion
             for(int i=0; i < palabraOculta.length(); i++) {
                if(palabraOculta.charAt(i)== letra.charAt(0)){
-               palabraConGuiones = palabraConGuiones.substring(2*i+1)
+               palabraConGuiones = palabraConGuiones.substring(0,2*i)
                                     + letra
                                     + palabraConGuiones.substring(2*i+1);
                }
@@ -59,7 +59,7 @@ public class ElAhorcamiento extends javax.swing.JFrame {
         
         else{ 
             numeroFallos++;
-            //jLabel3.settext(String.valueOf(numeroFallos));
+            jLabel3.setText(String.valueOf(numeroFallos));
         }
         
         repaint();
@@ -133,6 +133,7 @@ public class ElAhorcamiento extends javax.swing.JFrame {
         jButton26 = new javax.swing.JButton();
         jButton27 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -388,7 +389,13 @@ public class ElAhorcamiento extends javax.swing.JFrame {
         jLabel2.setText("_ _ _ _ _ ");
         jLabel2.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 1, true), javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 0, 0))));
         jLabel2.setOpaque(true);
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(417, 163, 365, 129));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, 365, 129));
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setOpaque(true);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 120, 40, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -566,6 +573,7 @@ public class ElAhorcamiento extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
