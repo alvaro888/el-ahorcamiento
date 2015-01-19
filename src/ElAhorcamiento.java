@@ -54,7 +54,7 @@ public class ElAhorcamiento extends javax.swing.JFrame {
                }
                
             }
-        pantalla.setText (palabraConGuiones);
+        jLabel2.setText (palabraConGuiones);
         }
         
         else{ 
@@ -89,7 +89,7 @@ public class ElAhorcamiento extends javax.swing.JFrame {
     
     
     } catch (IOException ex) {
-        Logger.getLogger(elAhorcado).class.getName()).log(Level.SEVERE,null,ex);
+        
         }
         g.drawImage(miImagen,0,0,jPanel1.getWidth(),jPanel1.getHeight(),null);
     }
